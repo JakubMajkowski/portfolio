@@ -2032,6 +2032,7 @@ textarea.form-control {
 
 .btn {
   display: inline-block;
+  margin-right: 15px;
   font-weight: 400;
   color: #212529;
   text-align: center;
@@ -2051,6 +2052,14 @@ textarea.form-control {
   -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out; }
+  @media (max-width: 768px) {
+    .btn {
+        display: block;
+        margin-right: 0; /* Usunięcie odstępu między przyciskami */
+        margin-bottom: 10px; /* Dodanie odstępu między przyciskami */
+    }
+}
+ 
   @media (prefers-reduced-motion: reduce) {
     .btn {
       -webkit-transition: none;
@@ -8454,71 +8463,88 @@ h1, h2, h3, h4, h5,
   color: #fff;
   font-size: 7vw; }
 
-  #home-section {
-    padding: 100px 0; /* Dodaj odpowiednie wypełnienie na górze i na dole */
-  }
-  
-  #home-section .container {
-    max-width: 1200px; /* Ogranicz maksymalną szerokość kontenera */
-  }
-  
-  #home-section .text {
-    padding: 20px; /* Dodaj wypełnienie dla tekstu */
-  }
-  
+  /* Aktualizacja kodu CSS */
+
+#home-section {
+  padding: 100px 0;
+}
+
+#home-section .container {
+  max-width: 1200px;
+}
+
+#home-section .text {
+  padding: 20px;
+}
+
+#home-section .img {
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+}
+
+#home-section .subheading {
+  font-size: 20px;
+}
+
+#home-section h1 {
+  font-size: 32px;
+}
+
+#home-section h5 {
+  font-size: 18px;
+}
+
+#home-section p {
+  margin-top: 20px;
+}
+
+#home-section .btn {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
   #home-section .img {
-    height: 400px; /* Ustaw wysokość obrazu */
-    background-size: cover; /* Dopasuj rozmiar obrazu do kontenera */
-    background-position: center; /* Wyśrodkuj obraz */
-  }
-  
-  #home-section .subheading {
-    font-size: 20px; /* Ustaw odpowiedni rozmiar dla podtytułu */
-  }
-  
-  #home-section h1 {
-    font-size: 32px; /* Ustaw odpowiedni rozmiar dla nagłówka */
-  }
-  
-  #home-section h5 {
-    font-size: 18px; /* Ustaw odpowiedni rozmiar dla tekstu */
-  }
-  
-  #home-section p {
-    margin-top: 20px; /* Dodaj odstęp na górze dla akapitu */
-  }
-  
-  #home-section .btn {
-    font-size: 16px; /* Ustaw odpowiedni rozmiar dla przycisków */
-  }
-  @media (max-width: 768px) {
-    #home-section .img {
-      height: 300px; /* zmniejsz wysokość obrazu na urządzeniach mobilnych */
-    }
-    
-    #home-section .text {
-      display: none; /* ukryj tekst poza obrazem na urządzeniach mobilnych */
-    }
-    
-    #home-section .text-on-image {
-      display: block; /* pokaż tekst na obrazie na urządzeniach mobilnych */
-      padding: 20px; /* dodaj wypełnienie dla tekstu na obrazie */
-    }
-  }
-  @media (min-width: 768px) {
-    #home-section .text-on-image {
       display: none;
-    }
   }
-  .im-name {
-    font-size: 40px; /* Ustaw odpowiedni rozmiar czcionki */
-    font-weight: bold; /* Ustaw pogrubienie */
+
+  #home-section .text {
+      display: block;
   }
-  
-  .im-name span {
-    color: #ffbd39; /* Ustaw kolor dla imienia */
-  }
-  
+}
+
+.im-name {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.im-name span {
+  color: #ffbd39;
+}
+
+.equal-height {
+  display: flex;
+}
+
+.equal-height > .col-md-4 {
+  display: flex;
+  flex-direction: column;
+}
+
+.equal-height .project {
+  flex-grow: 1;
+}
+
+.project.pola-app {
+  height: 100%;
+}
+
+.project.weather-app,
+.project.liniapp {
+  height: 44%;
+}
+
+
 .bg-light {
   background: #f8f9fa !important; }
 
@@ -8629,7 +8655,6 @@ h1, h2, h3, h4, h5,
 .resume-wrap {
   width: 100%;
   margin-bottom: 30px;
-  background: rgba(255, 255, 255, 0.1);
   padding: 30px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
