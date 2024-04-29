@@ -40,6 +40,16 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+::-moz-selection { /* Code for Firefox */
+  color: rgb(0, 0, 0);
+  background: #ffbd39;
+}
+  
+::selection {
+  color: rgb(0, 0, 0);
+  background: #ffbd39;
+}
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -3374,7 +3384,13 @@ input[type="button"].btn-block {
 
 .nav-link {
   display: block;
-  padding: 0.5rem 1rem; }
+  padding: 0.5rem 1rem; 
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;}
   .nav-link:hover, .nav-link:focus {
     text-decoration: none; }
   .nav-link.disabled {
@@ -9055,7 +9071,13 @@ textarea.form-control {
     font-size: 7vw;
     color: rgba(255, 255, 255, 0.1);
     z-index: -1;
-    font-weight: 900; }
+    font-weight: 900; 
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;}
     .heading-section h1.big.big-2 {
       right: 0; }
   .heading-section h2 {
