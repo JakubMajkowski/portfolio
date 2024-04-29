@@ -30,9 +30,9 @@
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.html">Majkowski</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+		  <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleIcon()">
+			<span id="menuIcon" class="icon-menu" style="font-size: 30px; color: #fff"></span>
+		  </button>
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav nav ml-auto">
@@ -56,7 +56,7 @@
 					<span id="name" style="color: #ffbd39; font-size: 60px; font-weight: 800;"></span>
 				  </span>
 				</h1>
-				<h5 class="mb-4">I am a third year computer science student with a specialisation in front-end developer. I have been working in UI/UX design for the past two years, with a particular focus on mobile design. I am currently working on the redesign of the 'Pola' app and am looking for a permanent job as a junior UI/UX designer.</h5>
+				<h5 class="mb-4">I am a third year computer science student with a specialization in front-end developer. I have been working in UI/UX design for the past two years, with a particular focus on mobile design. I am currently working on the redesign of the 'Pola' app and am looking for a permanent job as a junior UI/UX designer.</h5>
 				<p>
 				  <a href="./docs/Jakub Majkowski CV EN.pdf" download="Jakub Majkowski CV EN.pdf" class="btn btn-primary py-3 px-4">Download CV</a>
 				  <a href="https://dribbble.com/shots/22978128-Weather-app" class="btn btn-white btn-outline-white py-3 px-4">Latest project</a>
@@ -327,7 +327,20 @@
   
   <script src="js/main.js"></script>
 
-  <script>
+  <script> //Menu close and open icon
+	function toggleIcon() {
+	  const icon = document.getElementById('menuIcon');
+	  if (icon.classList.contains('icon-menu')) {
+		icon.classList.remove('icon-menu');
+		icon.classList.add('icon-close');
+	  } else {
+		icon.classList.remove('icon-close');
+		icon.classList.add('icon-menu');
+	  }
+	}
+  </script>
+
+  <script> //Typing animation
     const textElement = document.getElementById('name');
     const newTexts = ['Jakub Majkowski', 'UI/UX Designer'];
     const typingSpeed = 100;
@@ -365,6 +378,6 @@
 
     typeWriter(newTexts[index], 0);
   </script>
-    
+	  
   </body>
 </html>
