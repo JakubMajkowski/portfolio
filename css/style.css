@@ -8482,7 +8482,7 @@ h1, h2, h3, h4, h5,
   /* Aktualizacja kodu CSS */
 
 #home-section {
-  padding: 100px 0;
+  padding: 150px 0;
 }
 
 #home-section .container {
@@ -8520,6 +8520,10 @@ h1, h2, h3, h4, h5,
 }
 
 @media (max-width: 768px) {
+  #home-section {
+    padding: 50px 0;
+  }
+
   #home-section .img {
       display: none;
   }
@@ -8939,11 +8943,11 @@ textarea.form-control {
     font-size: 24px; }
 
 .ftco-section {
-  padding: 7em 0;
+  padding: 5em 0;
   position: relative; }
   @media (max-width: 767.98px) {
     .ftco-section {
-      padding: 6em 0; } }
+      padding: 4em 0; } }
 
 .ftco-no-pt {
   padding-top: 0 !important; }
